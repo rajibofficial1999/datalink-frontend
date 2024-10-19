@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --my-color: #fff;
+    /* or any other variables/style */
+}
+[data-theme='dark'] {
+    --my-color: #000;
+}
+[data-theme='pink'] {
+    --my-color: #ffabc8;
+}
+
+body {
+    background-color: var(--my-color);
+    width: 100vw;
+    overflow: hidden;
+}
+
+html {
+    width: 100vw;
+    overflow: hidden;
+}
+
+@layer components {
+    .table :nth-child(odd) td .custom-badge{
+        @apply bg-green-600
+    }
+}
